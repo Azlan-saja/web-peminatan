@@ -1,0 +1,62 @@
+Peminatan Program
+================
+WEB (Pakar dan Kripto )
+----------------------------
+1. Syarat => Peminatan APSI?
+
+Bahasa 
+==========
+1. HTML	=> Dasar
+2. CSS	=> Design	=> Front End
+3. JS	=> Interaktif
+---------------
+4. PHP	=> Back End
+
+Database
+==========
+1. MySQL		=> Client Server
+
+Tools,
+==========
+1. Editor		=> VS Code
+    https://code.visualstudio.com/download
+
+2. Browser	=> Google Chrome
+    https://www.google.com/chrome/
+
+3. Server		=> Xampp (Host dan MySQL)
+    https://www.apachefriends.org/download.html
+
+----Add Ons
+4. Composer
+    https://getcomposer.org/download/
+
+5. Node.JS
+    https://nodejs.org/en/download
+
+
+Framework dan CMS
+====================
+1. Laravel
+2. Material UI, AdminLTE
+
+=> Buat Project Baru Menggunakan Laravel
+===============================
+1. Buka CMD
+2. Akses folder root. C:\xampp\htdocs
+	cd\
+	cd C:\xampp\htdocs
+3. Ketikkan perintah composer dibawah ini
+    composer create-project laravel/laravel web-peminatan
+
+=> Jalankan Project Laravel
+==========================
+1. Buka terminal VS Code/CMD
+2. php artisan serve
+
+=> 
+
+
+
+
+
