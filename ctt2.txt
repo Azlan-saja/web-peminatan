@@ -1,5 +1,5 @@
 3. Download Project di URL s.id/web-peminatan
-   Extract dan pindahkan ke folder root C/xampp/htdocs
+    Extract dan pindahkan ke folder root C/xampp/htdocs
 
 4. Buka project menggunakan VS Code 
     dan klik menu View => terminal

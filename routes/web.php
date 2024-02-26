@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,13 +15,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('login');
-});
-
-Route::get('/admin', function () {
-    return view('admin.dashboard');
+    return view('auth.login');
 });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::middleware(['auth', 'user-access:Admin'])->group(function () {
+    Route::get('/admin/home', [HomeController::class, 'admin'])->name('admin.home');
+});
+  
+Route::middleware(['auth', 'user-access:Pasien'])->group(function () {
+    Route::get('/home', [HomeController::class, 'pasien'])->name('home');
+});
+

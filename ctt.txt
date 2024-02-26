@@ -63,6 +63,9 @@ Framework dan CMS
 		DB_DATABASE:db_web_peminatan
 	=> Aktifkan/Start MySQL di Xampp
 	=> php artisan migrate
+=> Ubah struktur tabel Users dengn menambah field baru
+	=> php artisan make:migration add_column_level_table_users --table=users
+	=> php artisan migrate
 
 
 

@@ -1,7 +1,7 @@
 @extends('layouts.utama')
-@extends('layouts.menu')  
+@extends('layouts.menu-pasien')  
 
-@section('judul')Admin Dashoboard @endsection
+@section('judul')Pasien Dashoboard @endsection
 
 @section('isi')     
     <div class="body-wrapper">
