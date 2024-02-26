@@ -54,7 +54,16 @@ Framework dan CMS
 1. Buka terminal VS Code/CMD
 2. php artisan serve
 
-=> 
+=> Page Login, registrasi, reset password
+	=> composer require laravel/ui
+	=> php artisan ui bootstrap --auth
+	=> npm install
+	=> npm run dev
+	=> Edit file .env
+		DB_DATABASE:db_web_peminatan
+	=> Aktifkan/Start MySQL di Xampp
+	=> php artisan migrate
+
 
 
 

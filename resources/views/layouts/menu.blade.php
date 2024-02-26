@@ -117,7 +117,12 @@
             
           </ul>  
           
-          <button class="btn btn-danger w-100"> Log Out </button>
+          <a class="btn btn-danger w-100" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"> Log Out </a>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+          </form>
         </nav>
         <!-- End Sidebar navigation -->
       </div>
