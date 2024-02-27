@@ -32,7 +32,7 @@
             </li>
             
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./index.html" aria-expanded="false">
+              <a class="sidebar-link" href="{{ route('penyakit.index') }}" aria-expanded="false">
                 <span>
                   <i class="ti ti-virus"></i>
                 </span>
@@ -83,7 +83,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./index.html" aria-expanded="false">
+              <a class="sidebar-link" href="#" aria-expanded="false">
                 <span>
                   <i class="ti ti-file-text"></i>
                 </span>
@@ -131,8 +131,8 @@
 @endsection
 
 @section('JsSidebar')
-  <script src="../assets/js/sidebarmenu.js"></script>
-  <script src="../assets/js/app.min.js"></script>
-  <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+  <script src="{{asset('assets/js/sidebarmenu.js')}}"></script>
+  <script src="{{asset('assets/js/app.min.js')}}"></script>
+  <script src="{{asset('assets/libs/simplebar/dist/simplebar.js')}}"></script>
 @endsection
 

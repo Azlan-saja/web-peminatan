@@ -63,9 +63,25 @@ Framework dan CMS
 		DB_DATABASE:db_web_peminatan
 	=> Aktifkan/Start MySQL di Xampp
 	=> php artisan migrate
-=> Ubah struktur tabel Users dengn menambah field baru
+        => Ubah struktur tabel Users dengn menambah field baru
 	=> php artisan make:migration add_column_level_table_users --table=users
 	=> php artisan migrate
+
+=> Akun login untuk admin dan pasien menggunakan seeder.
+	=> php artisan make:seeder UserSeeder
+	=> Edit file UserSeeder (database/seeders/UserSeeder)
+	=> php artisan db:seed --class=UserSeeder
+
+================================================
+=> Kelola Data Penyakit
+1) Buat tabel penyakit (database)
+	=> php artisan make:migration create_penyakit_table  --table=penyakit
+	=> Kita edit file migration tersebut (database/migrations)
+	=> php artisan migrate
+
+2) Buat Route atau URL
+	=> Edit file web.php (routes)
+	=> 
 
 
 

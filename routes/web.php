@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PenyakitController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +23,10 @@ Auth::routes();
 
 Route::middleware(['auth', 'user-access:Admin'])->group(function () {
     Route::get('/admin/home', [HomeController::class, 'admin'])->name('admin.home');
+    Route::get('/admin/penyakit', [PenyakitController::class, 'index'])->name('penyakit.index');
+    Route::get('/admin/penyakit/create', [PenyakitController::class, 'create'])->name('penyakit.create');
+    Route::post('/admin/penyakit/create', [PenyakitController::class, 'store'])->name('penyakit.store');
+    
 });
   
 Route::middleware(['auth', 'user-access:Pasien'])->group(function () {

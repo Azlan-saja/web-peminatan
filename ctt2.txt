@@ -1,14 +1,19 @@
-3. Download Project di URL s.id/web-peminatan
+1. Download Project di URL s.id/web-peminatan
     Extract dan pindahkan ke folder root C/xampp/htdocs
 
-4. Buka project menggunakan VS Code 
+2. Buka project menggunakan VS Code 
     dan klik menu View => terminal
 
-5. Ketikkan
+3. Ketikkan
     1. composer install 
     2. Cari file .env.example dan 
-        ubah nama file tersebut menjadi .env
+        => ubah nama file tersebut menjadi .env
+	=> Buka .env dan ganti DB_DATABASE=db_web_peminatan
     3. php artisan key:generate
-    4. php artisan serve
+    4. Xampp => Start MySQL 
+    5. php artisan migrate
+    6. php artisan serve
+
+
 
 
