@@ -43,4 +43,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function cekLevel()
+    {
+        // Cek app/http/middleware/RedirectIfAuthenticated
+        return match((string)$this->level) {
+            'Admin' => 'admin/home',
+            'Pasein' => 'home',
+        };
+    }
 }
