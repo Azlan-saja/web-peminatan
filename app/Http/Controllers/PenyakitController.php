@@ -52,7 +52,7 @@ class PenyakitController extends Controller
      */
     public function edit(Penyakit $penyakit)
     {
-        //
+       return view('admin.penyakit.edit', compact('penyakit'));
     }
 
     /**
@@ -60,14 +60,23 @@ class PenyakitController extends Controller
      */
     public function update(Request $request, Penyakit $penyakit)
     {
-        //
+       $request->validate([
+            'kode' => 'required|max:3',
+            'nama' => 'required',
+            'solusi' => 'required',
+        ]);        
+        $penyakit->update($request->all());         
+        return redirect()->route('penyakit.index')
+                        ->with('success','Perubahan Data Penyakit Berhasil.');
     }
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(Penyakit $penyakit)
-    {
-        //
+    {   
+        $penyakit->delete();
+        return redirect()->route('penyakit.index')
+                        ->with('success','Hapus Data Penyakit Berhasil.');
     }
 }

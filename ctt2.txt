@@ -7,12 +7,17 @@
 3. Ketikkan
     1. composer install 
     2. Cari file .env.example dan 
-        => ubah nama file tersebut menjadi .env
-	=> Buka .env dan ganti DB_DATABASE=db_web_peminatan
+        => Ubah nama file tersebut menjadi .env
+	=> Buka .env dan cari dan ganti DB_DATABASE=db_web_peminatan3
     3. php artisan key:generate
-    4. Xampp => Start MySQL 
+    4. Buka Xampp => Start MySQL 
     5. php artisan migrate
-    6. php artisan serve
+    6. php artisan db:seed --class=UserSeeder
+    7. php artisan serve
+ 
+4. Akses 127.0.0.0:8000 dan login menggunakan akun
+	admin@gmail.com			pasien@gmail.com
+	123456789				12345678
 
 
 

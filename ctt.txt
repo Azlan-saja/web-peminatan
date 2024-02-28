@@ -73,7 +73,12 @@ Framework dan CMS
 	=> php artisan db:seed --class=UserSeeder
 
 ================================================
-=> Kelola Data Penyakit
+=> Kelola Data Penyakit (CRUD)
+	C => Create 	=> Tambah data baru
+	R => Read	=> Menampilkan data yang sudah pernah ditambah
+	U => Update	=> Mengubah data yang sudah pernah ditambah
+	D => Delete	=> Hapus data yang sudah pernah ditambah
+
 1) Buat tabel penyakit (database)
 	=> php artisan make:migration create_penyakit_table  --table=penyakit
 	=> Kita edit file migration tersebut (database/migrations)
@@ -84,6 +89,11 @@ Framework dan CMS
 	=> Edit Menu admin (resources/views/layouts).
 	=> php artisan make:controller PenyakitController -r -m Penyakit
 	=> Edit Model Peanyakit (app/models)
+
+3) Alur MVC 	=> 	1. Buat Route					=> Routes/web.php
+				2. Edit "Model"					
+		 		2. Edit "Controller"				=> app/Http/Controllers
+		 		3. Tambah atau Edit "View"
 
 
 

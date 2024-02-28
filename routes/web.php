@@ -26,7 +26,11 @@ Route::middleware(['auth', 'user-access:Admin'])->group(function () {
     Route::get('/admin/penyakit', [PenyakitController::class, 'index'])->name('penyakit.index');
     Route::get('/admin/penyakit/create', [PenyakitController::class, 'create'])->name('penyakit.create');
     Route::post('/admin/penyakit/create', [PenyakitController::class, 'store'])->name('penyakit.store');
+    Route::delete('/admin/penyakit/{penyakit}', [PenyakitController::class, 'destroy'])->name('penyakit.destroy');
+    Route::get('/admin/penyakit/{penyakit}/edit', [PenyakitController::class, 'edit'])->name('penyakit.edit');
+    Route::put('/admin/penyakit/{penyakit}', [PenyakitController::class, 'update'])->name('penyakit.update');
     
+
 });
   
 Route::middleware(['auth', 'user-access:Pasien'])->group(function () {

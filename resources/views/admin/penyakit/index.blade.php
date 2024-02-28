@@ -45,14 +45,25 @@
                             <td>{{ $data->nama }}</td>
                             <td>{!! nl2br($data->solusi) !!}</td>
                             <td>
-                                <a href="" class="text-primary m-0"><i class="ti ti-edit "></i> Edit</a> 
+                                <a href="{{ route('penyakit.edit', $data->id) }}" 
+                                        class="text-primary m-0"><i class="ti ti-edit "></i> Edit</a> 
+                                        
                                 <hr class="m-1">
-                                <a href="" class= "text-danger"><i class="ti ti-trash "></i> Hapus</a>
+                                <form id="hapus-form" action="{{ route('penyakit.destroy', $data->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')                                   
+                                    <button 
+                                        onclick="event.preventDefault();
+                                                if (confirm('Yakin Data Dihapus?')) 
+                                                document.getElementById('hapus-form').submit();"
+                                        type="submit" class="btn text-danger"><i class="ti ti-trash "></i> Hapus</button>
+                                </form>
+                               
                             </td>
                         </tr>
                         @empty
                         <tr>
-                            <td colspan="4" class="text-center">
+                            <td colspan="5" class="text-center">
                                 Data Penyakit Kosong.
                             </td>
                         </tr>
