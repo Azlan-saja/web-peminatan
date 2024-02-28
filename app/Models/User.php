@@ -48,7 +48,7 @@ class User extends Authenticatable
     {
         // Cek app/http/middleware/RedirectIfAuthenticated
         return match((string)$this->level) {
-            'Admin' => 'admin/home',
+            'Admin' => 'admin.home',
             'Pasein' => 'home',
         };
     }

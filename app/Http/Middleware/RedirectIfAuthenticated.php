@@ -21,7 +21,7 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                 return redirect(Auth::user()->cekLevel());               
+                 return redirect()->route(Auth::user()->cekLevel());               
                 // return redirect(RouteServiceProvider::HOME);
             }
         }

@@ -44,7 +44,11 @@
                             <td>{{ $data->kode }}</td>
                             <td>{{ $data->nama }}</td>
                             <td>{!! nl2br($data->solusi) !!}</td>
-                            <td>Edit | Hapus</td>
+                            <td>
+                                <a href="" class="text-primary m-0"><i class="ti ti-edit "></i> Edit</a> 
+                                <hr class="m-1">
+                                <a href="" class= "text-danger"><i class="ti ti-trash "></i> Hapus</a>
+                            </td>
                         </tr>
                         @empty
                         <tr>
