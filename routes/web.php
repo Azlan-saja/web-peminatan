@@ -16,7 +16,11 @@ use App\Http\Controllers\PenyakitController;
 */
 
 Route::get('/', function () {
-    return view('auth.login');
+    if (Auth::check()){
+        if (Auth::user()->level == 'Admin') return redirect()->route('admin.home'); else return redirect()->route('home');
+    }else{
+        return view('auth.login');
+    }
 });
 
 Auth::routes();

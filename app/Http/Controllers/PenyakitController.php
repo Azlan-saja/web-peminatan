@@ -30,7 +30,7 @@ class PenyakitController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'kode' => 'required',
+            'kode' => 'required|max:3',
             'nama' => 'required',
             'solusi' => 'required',
         ]);        

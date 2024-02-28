@@ -28,6 +28,8 @@
                   @endif
                     
               <div class="card-body">
+
+
                 <a href="/" class="text-nowrap logo-img text-center d-block w-100">
                   <h1>Log In</h1>
                 </a>
@@ -63,6 +65,7 @@
                     <a class="text-primary fw-bold ms-2" href="{{ route('register') }}">Buat sekarang!</a>
                   </div>
                 </form>
+
               </div>
             </div>
           </div>

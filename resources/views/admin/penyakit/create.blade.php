@@ -46,9 +46,8 @@
                             <div class="row">
                                 <label class="col-lg-1 form-label">Solusi</label>                         
                               <div class="col-md-11">
-                                <textarea name="solusi" class="form-control  @error('solusi') is-invalid @enderror" cols="30" rows="5"></textarea>
-                                <!-- <input type="text" class="form-control  @error('solusi') is-invalid @enderror" name="solusi" value="{{ old('solusi') }}" required> -->
-                                  @error('solusi')
+                                <textarea name="solusi" class="form-control  @error('solusi') is-invalid @enderror" cols="30" rows="5">{{ old('solusi') }}</textarea>
+                                 @error('solusi')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

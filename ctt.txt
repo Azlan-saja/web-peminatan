@@ -81,8 +81,9 @@ Framework dan CMS
 
 2) Buat Route atau URL
 	=> Edit file web.php (routes)
-	=> 
-
+	=> Edit Menu admin (resources/views/layouts).
+	=> php artisan make:controller PenyakitController -r -m Penyakit
+	=> Edit Model Peanyakit (app/models)
 
 
 

@@ -43,7 +43,7 @@
                             <td>{{$loop->iteration}}</td>
                             <td>{{ $data->kode }}</td>
                             <td>{{ $data->nama }}</td>
-                            <td>{{ $data->solusi }}</td>
+                            <td>{!! nl2br($data->solusi) !!}</td>
                             <td>Edit | Hapus</td>
                         </tr>
                         @empty

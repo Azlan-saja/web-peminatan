@@ -11,6 +11,7 @@
             <div class="card mb-0">                                
               <div class="card-body text-center bg-dark text-white">
                     <h1 class="text-white">
+                       {{Auth::user()->name}} [{{Auth::user()->level}}] <br>
                         Anda tidak memiliki akses.                       
                     </h1>                
                 <p class="text-center">Hiduplah dijalan yang benar!</p>               
